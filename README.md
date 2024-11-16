@@ -1,92 +1,94 @@
-DSA Web Project
-This repository contains two main projects:
+# DSA Web Application
 
-dsa-sheet-app: A React.js application for the frontend.
-dsa-web: A Node.js + TypeScript application for the backend using Sequelize and MySQL.
-Prerequisites
-Node.js (version >= 14.x)
-npm (version >= 6.x)
-MySQL (installed and running)
-Project Structure
-plaintext
-Copy code
-dsa-web/
-  ├── dsa-sheet-app/       # React frontend app
-  ├── dsa-web/             # Node.js + TypeScript backend app
-Setup Instructions
-1. Clone the Repository
-bash
-Copy code
-git clone [https://github.com/username/dsa-web.git](https://github.com/harshal2451/dsa-sheet-application.git)
-Replace username with your GitHub username.
+This repository contains two main parts:
 
-2. Navigate to the Project Directory
-bash
-Copy code
-cd dsa-web
-3. Set Up the Backend (Node.js + TypeScript)
-Navigate to the backend directory:
+1. **DSA Sheet App** - A React application for displaying and managing DSA problems.
+2. **Dsa Web** - A Node.js + TypeScript backend server for handling API requests and user authentication.
 
-bash
-Copy code
-cd dsa-web
-Install dependencies:
+## Prerequisites
 
-bash
-Copy code
-npm install
-Configure the .env file in the dsa-web directory:
+Before running both the projects, make sure you have the following installed:
 
-Create a .env file with the following content:
-env
-Copy code
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/get-npm) (Node Package Manager)
+
+## Project Structure
+
+```
+dsa-sheet-application/
+  ├── dsa-sheet-app/        # React application for the DSA sheet
+  └── dsa-web/               # Node.js + TypeScript backend server
+```
+
+### Running the Projects
+
+#### 1. Running the React App (`dsa-sheet-app`)
+
+To run the React app, follow these steps:
+
+1. Navigate to the `dsa-sheet-app` directory:
+   ```bash
+   cd dsa-sheet-application/dsa-sheet-app
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
+
+   This will run the React app on [http://localhost:3000](http://localhost:3000).
+
+#### 2. Running the Node.js + TypeScript Backend (`dsa-web`)
+
+To run the backend, follow these steps:
+
+1. Navigate to the `dsa-web` directory:
+   ```bash
+   cd dsa-sheet-application/dsa-web
+   ```
+
+2. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the backend server:
+   ```bash
+   npm run start_ts
+   ```
+
+   This will start the backend server using TypeScript. The server will be accessible at [http://localhost:3001](http://localhost:3001) (or a different port if configured differently).
+
+### Environment Variables
+
+For the backend, create a `.env` file in the `dsa-sheet-application/dsa-web` directory with the necessary environment variables. Here are the typical variables you may need:
+
+```
 DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=yourdatabase
 DB_PORT=3306
-JWT_SECRET=your_jwt_secret
-Replace yourpassword, yourdatabase, and your_jwt_secret with your MySQL and JWT details.
-Run database migrations:
+DB_USER=root
+DB_PASSWORD=password
+DB_NAME=dsa_db
+JWT_SECRET=your-jwt-secret
+```
 
-bash
-Copy code
-npx sequelize-cli db:migrate
-Start the backend server:
+Adjust the values accordingly based on your setup.
 
-bash
-Copy code
-npm run start_ts
-The backend server should now be running at http://localhost:3000.
+### Folder Structure
 
-4. Set Up the Frontend (React.js)
-Navigate to the frontend directory:
-bash
-Copy code
-cd ../dsa-sheet-app
-Install dependencies:
-bash
-Copy code
-npm install
-Start the frontend development server:
-bash
-Copy code
-npm start
-The frontend app should now be running at http://localhost:3001.
+#### `dsa-sheet-app` (React App)
 
-Running Both Projects
-Backend: Ensure your MySQL server is running, then start the backend server as described in step 3.
-Frontend: In a separate terminal, start the frontend server as described in step 4.
-Environment Variables
-Ensure the .env file in the dsa-web directory is correctly configured with your MySQL and JWT details.
-Project Scripts
-Backend (dsa-web)
-Start the server: npm run start_ts
-Run database migrations: npx sequelize-cli db:migrate
-Frontend (dsa-sheet-app)
-Start the React app: npm start
-Build the app for production: npm run build
-Run tests: npm test
-Notes
-Make sure both your frontend and backend servers are running on different ports (3000 for backend and 3001 for frontend).
-You can adjust the frontend's API calls to point to http://localhost:3000 for backend interactions.
+- `src/` - Contains React components, Redux slices, and other frontend code.
+- `public/` - Contains static assets (e.g., images, icons).
+- `package.json` - Lists dependencies and scripts for running the app.
+
+#### `dsa-web` (Node.js + TypeScript Backend)
+
+- `src/` - Contains backend code, including models, controllers, and routes.
+- `index.ts` - The entry point for the backend application.
+- `package.json` - Lists dependencies and scripts for running the back
