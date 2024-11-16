@@ -1,0 +1,156 @@
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f8fa;
+}
+
+/* Layout Styles */
+.ant-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Sidebar - Vertical Navbar for Topics */
+.ant-layout-sider {
+  background-color: #001529;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.ant-menu-item {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ant-menu-item:hover {
+  background-color: #1890ff;
+  color: #fff;
+}
+
+.ant-menu-item-selected {
+  background-color: #4d7295;
+  color: #fff;
+}
+
+.ant-menu-item button {
+  width: 100%;
+  padding: 12px 20px;
+}
+
+.ant-menu-item button:hover {
+  color: #1890ff;
+}
+
+/* Main Content Area */
+.ant-layout-content {
+  padding: 20px;
+  background-color: #fff;
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.ant-layout-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Problem List Styling */
+.ant-list-item {
+  background-color: #f9f9f9;
+  padding: 20px !important;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-list-item:hover {
+  background-color: #f1f1f1;
+}
+
+.ant-list-item .ant-checkbox {
+  margin-right: 15px;
+}
+
+.ant-list-item h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.ant-list-item a {
+  font-size: 14px;
+  color: #1890ff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.ant-list-item a:hover {
+  text-decoration: underline;
+}
+
+/* Difficulty Label */
+.ant-list-item .difficulty {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* Pagination Styling */
+.ant-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-pagination-item {
+  font-size: 14px;
+}
+
+.ant-pagination-prev, .ant-pagination-next {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.ant-pagination-item-active {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-pagination-item-active a {
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .ant-layout {
+    flex-direction: column;
+  }
+
+  .ant-layout-sider {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .ant-layout-content {
+    padding: 10px;
+  }
+
+  .ant-btn {
+    font-size: 14px;
+  }
+}
+
+
