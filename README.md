@@ -69,12 +69,10 @@ To run the backend, follow these steps:
 For the backend, create a `.env` file in the `dsa-sheet-application/dsa-web` directory with the necessary environment variables. Here are the typical variables you may need:
 
 ```
-DB_HOST=localhost
-DB_PORT=3306
 DB_USER=root
-DB_PASSWORD=password
+DB_PWD=password
 DB_NAME=dsa_db
-JWT_SECRET=your-jwt-secret
+LOGIN_SECRET=your-jwt-secret
 ```
 
 Adjust the values accordingly based on your setup.
